@@ -7,14 +7,11 @@ import java.sql.Connection;
 public class Main {
 
     public static void main(String[] args) {
-        Font textFont = new Font("Arial", Font.PLAIN, 22);
-        JButton bLogin = new JButton("Submit");
-        JPanel panel = new JPanel();
-        JLabel username = new JLabel("Username:");
-        JLabel password = new JLabel("Password:");
-        JTextField tUser = new JTextField(15);
-        JPasswordField tpass = new JPasswordField(15);
-        Connection con;
-        Boolean loggedIn = false;
+        JFrame frame = new JFrame("My app");  // create an instance, title in ""
+        frame.setContentPane(new StartForm().getPanel1());  // adds the panel
+        frame.setSize(800,600);         // set it’s size
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLocation(200,100);     // where to place it
+        frame.setVisible(true);
     }
 }
