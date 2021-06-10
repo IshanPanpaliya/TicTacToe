@@ -14,7 +14,7 @@ public class Main {
         JLabel password = new JLabel("Password:");
         JTextField tUser = new JTextField(15);
         JPasswordField tpass = new JPasswordField(15);
-        private Connection con;
+        Connection con;
         Boolean loggedIn = false;
     }
 }
