@@ -6,6 +6,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 public class MainForm
 {
@@ -20,7 +21,7 @@ public class MainForm
     private JButton button7;
     private JButton button8;
     private JButton button9;
-    private JButton[] btnArr;
+    private final JButton[] btnArr;
     public boolean players;
 
     public JPanel getPanel2()
@@ -77,21 +78,40 @@ public class MainForm
         btnArr[6] = button7;
         btnArr[7] = button8;
         btnArr[8] = button9;
-
+//        if (players == true){
+//            titleLabel.setText("You are playing against another player!");
+//            for (int j = 0; j < 9; j++)
+//            {
+//                btnArr[j].addActionListener(new ActionListener()
+//                {
+//                    @Override
+//                    public void actionPerformed(ActionEvent e)
+//                    {
+//
+//
+//                        if(btnArr[j].equals(""))
+//                        {
+//                            btnArr[j].setText(turn.get(0));
+//                            turn.remove(0);
+//                        }
+//                        winProcedure();
+//
+//                    }
+//                });
+//            }
+//        }
         if (players == true)
         {
-            System.out.println("j");
             titleLabel.setText("You are playing against another player!");
+
             button1.addActionListener(new ActionListener()
             {
                 @Override
                 public void actionPerformed(ActionEvent e)
                 {
                     playTurn(button1);
-
                 }
             });
-//                turn = true;
             button2.addActionListener(new ActionListener()
             {
                 @Override
@@ -129,7 +149,6 @@ public class MainForm
 
                 }
             });
-//                turn = true;
             button3.addActionListener(new ActionListener()
             {
                 @Override
@@ -166,7 +185,6 @@ public class MainForm
 
                 }
             });
-//                turn = true;
             button4.addActionListener(new ActionListener()
             {
                 @Override
@@ -203,7 +221,6 @@ public class MainForm
 
                 }
             });
-//                turn = true;
             button5.addActionListener(new ActionListener()
             {
                 @Override
@@ -240,7 +257,6 @@ public class MainForm
 
                 }
             });
-//                turn = true;
             button6.addActionListener(new ActionListener()
             {
                 @Override
@@ -277,7 +293,6 @@ public class MainForm
 
                 }
             });
-//                turn = true;
             button7.addActionListener(new ActionListener()
             {
                 @Override
@@ -314,7 +329,6 @@ public class MainForm
 
                 }
             });
-//                turn = true;
             button8.addActionListener(new ActionListener()
             {
                 @Override
@@ -351,7 +365,6 @@ public class MainForm
 
                 }
             });
-//                turn = true;
             button9.addActionListener(new ActionListener()
             {
                 @Override
@@ -392,6 +405,7 @@ public class MainForm
                 }
             });
         }
+
         else if (players == false)
         {
             titleLabel.setText("You are playing against the computer!");
@@ -405,113 +419,232 @@ public class MainForm
                         turn.remove(0);
                         winProcedure();
 
-                        if (button1.getText().equals(null)){
-            if (button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button7.getText().equals("X")) || (button5.getText().equals("X") && button9.getText().equals("X")){
-            button1.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button2.getText().equals(null)){
-            else if (button1.getText().equals("X") && button3.getText().equals("X")) || (button5.getText().equals("X") && button8.getText().equals("X"))
-        {
-            button2.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button3.getText().equals(null)){
-            else if (button2.getText().equals("X") && button1.getText().equals("X")) || (button6.getText().equals("X") && button9.getText().equals("X")) || (button5.getText().equals("X") && button6.getText().equals("X"))
-        {
-            button3.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button4.getText().equals(null)){
-            else if (button5.getText().equals("X") && button6.getText().equals("X")) || (button1.getText().equals("X") && button7.getText().equals("X"))
-            {
-                button4.setText(turn.get(0));
-                turn.remove(0);
-            }}
-        if (button5.getText().equals(null)){
-            else if (button4.getText().equals("X") && button6.getText().equals("X")) || (button2.getText().equals("X") && button8.getText().equals("X")) || (button1.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X"))
-        {
-            button5.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button6.getText().equals(null)){
-            else if (button5.getText().equals("X") && button4.getText().equals("X")) || (button3.getText().equals("X") && button9.getText().equals("X"))
-        {
-            button6.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button7.getText().equals(null)){
-            else if (button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X")) || (button5.getText().equals("X") && button3.getText().equals("X"))
-        {
-            button7.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button8.getText().equals(null)){
-            else if (button7.getText().equals("X") && button9.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X"))
-            {
-                button8.setText(turn.get(0));
-                turn.remove(0);
-            }}
-        if (button9.getText().equals(null)){
-            else if (button8.getText().equals("X") && button7.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X")) || (button5.getText().equals("X") && button1.getText().equals("X"))
-        {
-            button9.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button1.getText().equals(null)){
-            else if (button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button7.getText().equals("O")) || (button5.getText().equals("O") && button9.getText().equals("O")){
-            button1.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button2.getText().equals(null)){
-            else if (button1.getText().equals("O") && button3.getText().equals("O")) || (button5.getText().equals("O") && button8.getText().equals("X"))
-        {
-            button2.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button3.getText().equals(null)){
-            else if (button2.getText().equals("O") && button1.getText().equals("O")) || (button6.getText().equals("O") && button9.getText().equals("O")) || (button5.getText().equals("O") && button6.getText().equals("O"))
-        {
-            button3.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button4.getText().equals(null)){
-            else if (button5.getText().equals("X") && button6.getText().equals("O")) || (button1.getText().equals("O") && button7.getText().equals("O"))
-        {
-            button4.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button5.getText().equals(null)){
-            else if (button4.getText().equals("X") && button6.getText().equals("O")) || (button2.getText().equals("O") && button8.getText().equals("O")) || (button1.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O"))
-        {
-            button5.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button6.getText().equals(null)){
-            else if (button5.getText().equals("O") && button4.getText().equals("O")) || (button3.getText().equals("O") && button9.getText().equals("O"))
-        {
-            button6.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button7.getText().equals(null)){
-            else if (button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O")) || (button5.getText().equals("O") && button3.getText().equals("O"))
-        {
-            button7.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button8.getText().equals(null)){
-            else if (button7.getText().equals("O") && button9.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O"))
-        {
-            button8.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button9.getText().equals(null)){
-            else if (button8.getText().equals("O") && button7.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O")) || (button5.getText().equals("O") && button1.getText().equals("O"))
-        {
-            button9.setText(turn.get(0));
-            turn.remove(0);
-        }}
-                        winProcedure();
+                        Boolean AIhasPlayed = false;
+                        if (button1.getText().equals("")){
+                            if(AIhasPlayed){
+                                return;
+                            }
+                            if ( (button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button7.getText().equals("X")) || (button5.getText().equals("X") && button9.getText().equals("X")) )
+                            {
+                                button1.setText(turn.get(0));
+                                turn.remove(0);
+                                AIhasPlayed = true;
+                            }
+                        }
+                        if (button2.getText().equals("")){
+                            if(AIhasPlayed){
+                                return;
+                            }
+                            if( (button1.getText().equals("X") && button3.getText().equals("X")) || (button5.getText().equals("X") && button8.getText().equals("X")) )
+                            {
+                                button2.setText(turn.get(0));
+                                turn.remove(0);
+                                AIhasPlayed = true;
+                            }
+                        }
+                        if (button2.getText().equals("")){
+                            if(AIhasPlayed){
+                                return;
+                            }
+                            if ( (button1.getText().equals("X") && button3.getText().equals("X")) || (button5.getText().equals("X") && button8.getText().equals("X")) )
+                            {
+                                button2.setText(turn.get(0));
+                                turn.remove(0);
+                                AIhasPlayed = true;
+                            }
+                        }
+                        if (button3.getText().equals("")){
+                            if(AIhasPlayed){
+                                return;
+                            }
+                            if ((button2.getText().equals("X") && button1.getText().equals("X")) || (button6.getText().equals("X") && button9.getText().equals("X")) || (button5.getText().equals("X") && button6.getText().equals("X")))
+                            {
+                                button3.setText(turn.get(0));
+                                turn.remove(0);
+                                AIhasPlayed = true;
+                            }
+                        }
+                        if (button4.getText().equals("")){
+                            if(AIhasPlayed){
+                                return;
+                            }
+                            if((button5.getText().equals("X") && button6.getText().equals("X")) || (button1.getText().equals("X") && button7.getText().equals("X")))
+                                {
+                                    button4.setText(turn.get(0));
+                                    turn.remove(0);
+                                    AIhasPlayed = true;
+                                }
+                            }
+                        if (button5.getText().equals("")){
+                            if(AIhasPlayed){
+                                return;
+                            }
+                            if ((button4.getText().equals("X") && button6.getText().equals("X")) || (button2.getText().equals("X") && button8.getText().equals("X")) || (button1.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X")))
+                            {
+                                button5.setText(turn.get(0));
+                                turn.remove(0);
+                                AIhasPlayed = true;
+                            }
+                        }
+                        if (button6.getText().equals("")){
+                            if(AIhasPlayed){
+                                return;
+                            }
+                            if ((button5.getText().equals("X") && button4.getText().equals("X")) || (button3.getText().equals("X") && button9.getText().equals("X")))
+                            {
+                                button6.setText(turn.get(0));
+                                turn.remove(0);
+                                AIhasPlayed = true;
+                            }
+                        }
+                        if (button7.getText().equals("")){
+                            if(AIhasPlayed){
+                                return;
+                            }
+                            if ((button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X")) || (button5.getText().equals("X") && button3.getText().equals("X")))
+                            {
+                                button7.setText(turn.get(0));
+                                turn.remove(0);
+                                AIhasPlayed = true;
+                            }
+                        }
+                        if (button8.getText().equals("")){
+                            if(AIhasPlayed){
+                                return;
+                            }
+                            if ((button7.getText().equals("X") && button9.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X")))
+                            {
+                                button8.setText(turn.get(0));
+                                turn.remove(0);
+                                AIhasPlayed = true;
+                            }
+                        }
+                        if (button9.getText().equals("")){
+                            if(AIhasPlayed){
+                                return;
+                            }
+                            if ((button8.getText().equals("X") && button7.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X")) || (button5.getText().equals("X") && button1.getText().equals("X")))
+                            {
+                                button9.setText(turn.get(0));
+                                turn.remove(0);
+                                AIhasPlayed = true;
+                            }
+                        }
+                        if (button1.getText().equals("")){
+                            if(AIhasPlayed){
+                                return;
+                            }
+                            if ((button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button7.getText().equals("O")) || (button5.getText().equals("O") && button9.getText().equals("O")))
+                            {
+                                button1.setText(turn.get(0));
+                                turn.remove(0);
+                                AIhasPlayed = true;
+                            }
+                        }
+                        if (button2.getText().equals("")){
+                            if(AIhasPlayed){
+                                return;
+                            }
+                            if ((button1.getText().equals("O") && button3.getText().equals("O")) || (button5.getText().equals("O") && button8.getText().equals("X")))
+                            {
+                                button2.setText(turn.get(0));
+                                turn.remove(0);
+                                AIhasPlayed = true;
+                            }
+                        }
+                        if (button3.getText().equals("")){
+                            if(AIhasPlayed){
+                                return;
+                            }
+                            if ((button2.getText().equals("O") && button1.getText().equals("O")) || (button6.getText().equals("O") && button9.getText().equals("O")) || (button5.getText().equals("O") && button6.getText().equals("O")))
+                            {
+                                button3.setText(turn.get(0));
+                                turn.remove(0);
+                                AIhasPlayed = true;
+                            }
+                        }
+                        if (button4.getText().equals("")){
+                            if(AIhasPlayed){
+                                return;
+                            }
+                            if ((button5.getText().equals("X") && button6.getText().equals("O")) || (button1.getText().equals("O") && button7.getText().equals("O")))
+                            {
+                                button4.setText(turn.get(0));
+                                turn.remove(0);
+                                AIhasPlayed = true;
+                            }
+                        }
+                        if (button5.getText().equals("")){
+                            if(AIhasPlayed){
+                                return;
+                            }
+                            if ((button4.getText().equals("X") && button6.getText().equals("O")) || (button2.getText().equals("O") && button8.getText().equals("O")) || (button1.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O")))
+                            {
+                                button5.setText(turn.get(0));
+                                turn.remove(0);
+                                AIhasPlayed = true;
+                            }
+                        }
+                        if (button6.getText().equals("")){
+                            if(AIhasPlayed){
+                                return;
+                            }
+                            if ((button5.getText().equals("O") && button4.getText().equals("O")) || (button3.getText().equals("O") && button9.getText().equals("O")))
+                            {
+                                button6.setText(turn.get(0));
+                                turn.remove(0);
+                                AIhasPlayed = true;
+                            }
+                        }
+                        if (button7.getText().equals("")){
+                            if(AIhasPlayed){
+                                return;
+                            }
+                            if ((button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O")) || (button5.getText().equals("O") && button3.getText().equals("O")))
+                            {
+                                button7.setText(turn.get(0));
+                                turn.remove(0);
+                                AIhasPlayed = true;
+                            }
+                        }
+                        if (button8.getText().equals("")){
+                            if(AIhasPlayed){
+                                return;
+                            }
+                            if ((button7.getText().equals("O") && button9.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O")))
+                            {
+                                button8.setText(turn.get(0));
+                                turn.remove(0);
+                                AIhasPlayed = true;
+                            }
+                        }
+                        if (button9.getText().equals("")){
+                            if(AIhasPlayed){
+                                return;
+                            }
+                            if ((button8.getText().equals("O") && button7.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O")) || (button5.getText().equals("O") && button1.getText().equals("O")))
+                            {
+                                button9.setText(turn.get(0));
+                                turn.remove(0);
+                                AIhasPlayed = true;
+                            }
+                        }
+                        if(!AIhasPlayed){
+                            int AIMove = getNextEmpty(btnArr);
+                            if(AIMove == -1){
+                                System.out.println("It's a Draw!");
+                                System.exit(0);
+                            }
+                            btnArr[AIMove].setText(turn.get(0));
+                            turn.remove(0);
+                        }
+                        try
+                        {
+                            winProcedure();
+                        } catch (InterruptedException interruptedException)
+                        {
+                            interruptedException.printStackTrace();
+                        }
                     }
                 });
             } //add action listeners
@@ -520,7 +653,6 @@ public class MainForm
         {
             titleLabel.setText("Draw");
         }
-
     }
 
     public int getNextEmpty(JButton[] arr){
@@ -532,122 +664,35 @@ public class MainForm
         }
         return -1;
     }
-    public void winProcedure(){
+    public void winProcedure() throws InterruptedException
+    {
         if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X")))
         {
             titleLabel.setText("Player 1 wins!");
-            System.exit(0);
         }
         if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O")))
         {
             titleLabel.setText("Player 2 wins!");
-            System.exit(0);
         }
+        TimeUnit.SECONDS.sleep(3);
+        System.exit(0);
     }
+
 }
-if (button1.getText().equals(null)){
-            if (button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button7.getText().equals("X")) || (button5.getText().equals("X") && button9.getText().equals("X")){
-            button1.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button2.getText().equals(null)){
-            else if (button1.getText().equals("X") && button3.getText().equals("X")) || (button5.getText().equals("X") && button8.getText().equals("X"))
-        {
-            button2.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button3.getText().equals(null)){
-            else if (button2.getText().equals("X") && button1.getText().equals("X")) || (button6.getText().equals("X") && button9.getText().equals("X")) || (button5.getText().equals("X") && button6.getText().equals("X"))
-        {
-            button3.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button4.getText().equals(null)){
-            else if (button5.getText().equals("X") && button6.getText().equals("X")) || (button1.getText().equals("X") && button7.getText().equals("X"))
-            {
-                button4.setText(turn.get(0));
-                turn.remove(0);
-            }}
-        if (button5.getText().equals(null)){
-            else if (button4.getText().equals("X") && button6.getText().equals("X")) || (button2.getText().equals("X") && button8.getText().equals("X")) || (button1.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X"))
-        {
-            button5.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button6.getText().equals(null)){
-            else if (button5.getText().equals("X") && button4.getText().equals("X")) || (button3.getText().equals("X") && button9.getText().equals("X"))
-        {
-            button6.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button7.getText().equals(null)){
-            else if (button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X")) || (button5.getText().equals("X") && button3.getText().equals("X"))
-        {
-            button7.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button8.getText().equals(null)){
-            else if (button7.getText().equals("X") && button9.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X"))
-            {
-                button8.setText(turn.get(0));
-                turn.remove(0);
-            }}
-        if (button9.getText().equals(null)){
-            else if (button8.getText().equals("X") && button7.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X")) || (button5.getText().equals("X") && button1.getText().equals("X"))
-        {
-            button9.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button1.getText().equals(null)){
-            else if (button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button7.getText().equals("O")) || (button5.getText().equals("O") && button9.getText().equals("O")){
-            button1.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button2.getText().equals(null)){
-            else if (button1.getText().equals("O") && button3.getText().equals("O")) || (button5.getText().equals("O") && button8.getText().equals("X"))
-        {
-            button2.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button3.getText().equals(null)){
-            else if (button2.getText().equals("O") && button1.getText().equals("O")) || (button6.getText().equals("O") && button9.getText().equals("O")) || (button5.getText().equals("O") && button6.getText().equals("O"))
-        {
-            button3.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button4.getText().equals(null)){
-            else if (button5.getText().equals("X") && button6.getText().equals("O")) || (button1.getText().equals("O") && button7.getText().equals("O"))
-        {
-            button4.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button5.getText().equals(null)){
-            else if (button4.getText().equals("X") && button6.getText().equals("O")) || (button2.getText().equals("O") && button8.getText().equals("O")) || (button1.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O"))
-        {
-            button5.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button6.getText().equals(null)){
-            else if (button5.getText().equals("O") && button4.getText().equals("O")) || (button3.getText().equals("O") && button9.getText().equals("O"))
-        {
-            button6.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button7.getText().equals(null)){
-            else if (button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O")) || (button5.getText().equals("O") && button3.getText().equals("O"))
-        {
-            button7.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button8.getText().equals(null)){
-            else if (button7.getText().equals("O") && button9.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O"))
-        {
-            button8.setText(turn.get(0));
-            turn.remove(0);
-        }}
-        if (button9.getText().equals(null)){
-            else if (button8.getText().equals("O") && button7.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O")) || (button5.getText().equals("O") && button1.getText().equals("O"))
-        {
-            button9.setText(turn.get(0));
-            turn.remove(0);
-        }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
