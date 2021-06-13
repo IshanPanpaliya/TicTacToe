@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 
 public class MainForm {
     private JLabel titleLabel;
@@ -27,14 +28,13 @@ public class MainForm {
         return panel2;
 
     }
-//    public void setPlayers(boolean players){
+    //    public void setPlayers(boolean players){
 //        this.players = players;
 //    }
     public MainForm(boolean players){
         final ArrayList<String>turn= new ArrayList<String>(Arrays.asList("X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X"));
 
-        boolean game;
-        game = true;
+
 //        turn = false;
         this.players = players;
         if (players== true){
@@ -56,14 +56,16 @@ public class MainForm {
                             turn.remove(0);
                             i++;
                         }
+                        if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                            titleLabel.setText("Player 1 wins!");
+                            break;
+                        }
+                        if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                            titleLabel.setText("Player 2 wins!");
+                            break;
+                        }
+                    }
 
-                    }
-                    if (( button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X"))  || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
-                        titleLabel.setText("player 1 wins!");
-                    }
-                    if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O"))  || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O"))  || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
-                        titleLabel.setText("player 2 wins!");
-                    }
 
                 }
             });
@@ -85,14 +87,16 @@ public class MainForm {
                             turn.remove(0);
                             i++;
                         }
+                        if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                            titleLabel.setText("Player 1 wins!");
+                            break;
+                        }
+                        if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                            titleLabel.setText("Player 2 wins!");
+                            break;
+                        }
+                    }
 
-                    }
-                    if (( button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X"))  || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
-                        titleLabel.setText("player 1 wins!");
-                    }
-                    if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O"))  || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O"))  || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
-                        titleLabel.setText("player 2 wins!");
-                    }
 
                 }
             });
@@ -113,14 +117,16 @@ public class MainForm {
                             button3.setText(turn.get(0));
                             turn.remove(0);
                         }
+                        if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                            titleLabel.setText("Player 1 wins!");
+                            break;
+                        }
+                        if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                            titleLabel.setText("Player 2 wins!");
+                            break;
+                        }
+                    }
 
-                    }
-                    if (( button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X"))  || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
-                        titleLabel.setText("player 1 wins!");
-                    }
-                    if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O"))  || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O"))  || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
-                        titleLabel.setText("player 2 wins!");
-                    }
 
 
                 }
@@ -142,14 +148,16 @@ public class MainForm {
                             button4.setText(turn.get(0));
                             turn.remove(0);
                         }
+                        if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                            titleLabel.setText("Player 1 wins!");
+                            break;
+                        }
+                        if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                            titleLabel.setText("Player 2 wins!");
+                            break;
+                        }
+                    }
 
-                    }
-                    if (( button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X"))  || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
-                        titleLabel.setText("player 1 wins!");
-                    }
-                    if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O"))  || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O"))  || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
-                        titleLabel.setText("player 2 wins!");
-                    }
 
                 }
             });
@@ -170,14 +178,16 @@ public class MainForm {
                             button5.setText(turn.get(0));
                             turn.remove(0);
                         }
+                        if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                            titleLabel.setText("Player 1 wins!");
+                            break;
+                        }
+                        if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                            titleLabel.setText("Player 2 wins!");
+                            break;
+                        }
+                    }
 
-                    }
-                    if (( button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X"))  || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
-                        titleLabel.setText("player 1 wins!");
-                    }
-                    if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O"))  || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O"))  || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
-                        titleLabel.setText("player 2 wins!");
-                    }
 
                 }
             });
@@ -198,14 +208,16 @@ public class MainForm {
                             button6.setText(turn.get(0));
                             turn.remove(0);
                         }
+                        if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                            titleLabel.setText("Player 1 wins!");
+                            break;
+                        }
+                        if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                            titleLabel.setText("Player 2 wins!");
+                            break;
+                        }
+                    }
 
-                    }
-                    if (( button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X"))  || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
-                        titleLabel.setText("player 1 wins!");
-                    }
-                    if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O"))  || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O"))  || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
-                        titleLabel.setText("player 2 wins!");
-                    }
 
                 }
             });
@@ -226,14 +238,16 @@ public class MainForm {
                             button7.setText(turn.get(0));
                             turn.remove(0);
                         }
+                        if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                            titleLabel.setText("Player 1 wins!");
+                            break;
+                        }
+                        if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                            titleLabel.setText("Player 2 wins!");
+                            break;
+                        }
+                    }
 
-                    }
-                    if (( button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X"))  || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
-                        titleLabel.setText("player 1 wins!");
-                    }
-                    if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O"))  || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O"))  || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
-                        titleLabel.setText("player 2 wins!");
-                    }
 
                 }
             });
@@ -254,14 +268,16 @@ public class MainForm {
                             button8.setText(turn.get(0));
                             turn.remove(0);
                         }
+                        if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                            titleLabel.setText("Player 1 wins!");
+                            break;
+                        }
+                        if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                            titleLabel.setText("Player 2 wins!");
+                            break;
+                        }
+                    }
 
-                    }
-                    if (( button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X"))  || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
-                        titleLabel.setText("player 1 wins!");
-                    }
-                    if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O"))  || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O"))  || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
-                        titleLabel.setText("player 2 wins!");
-                    }
 
                 }
             });
@@ -285,47 +301,559 @@ public class MainForm {
                             button9.setText(turn.get(0));
                             turn.remove(0);
                         }
+                        if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                            titleLabel.setText("Player 1 wins!");
+                            break;
+                        }
+                        if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                            titleLabel.setText("Player 2 wins!");
+                            break;
+                        }
+                    }
 
-                    }
-                    if (( button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X"))  || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
-                        titleLabel.setText("player 1 wins!");
-                    }
-                    if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O"))  || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O"))  || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
-                        titleLabel.setText("player 2 wins!");
-                    }
 
 
                 }
             });
         }
-        else if (players == false){
+        else if (players == false) {
             titleLabel.setText("You are playing against the computer!");
+            int p = 0;
+//            boolean game = true;
+
+            for (int j = 0; j <50 ; j++) {
+
+
+                Random rand = new Random();
+                int squares = 9;
+                int AI_square = rand.nextInt(squares);
+
+                if (turn.get(0) == "X") {
+                    if (AI_square == 0) {
+
+                        for (int i = 0; i < 1; ) {
+                            if (button1.getText().equals("O")) {
+                                button1.setText("O");
+
+                            } else if (button1.getText().equals("X")) {
+                                button1.setText("X");
+                                //                                turn = true;
+                                i++;
+                            } else {
+                                button1.setText(turn.get(0));
+                                turn.remove(0);
+                                i++;
+                            }
+
+                        }
+
+                        if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                            titleLabel.setText("Player 1 wins!");
+                            ;
+                            break;
+                        }
+                        if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                            titleLabel.setText("Player 2 wins!");
+                            ;
+                            break;
+                        }
+                    } else if (AI_square == 1) {
+                        for (int i = 0; i < 1; ) {
+                            if (button2.getText().equals("O")) {
+                                button2.setText("O");
+                                break;
+                            } else if (button2.getText().equals("X")) {
+                                button2.setText("X");
+                                //                                turn = true;
+                                i++;
+                            } else {
+                                button2.setText(turn.get(0));
+                                turn.remove(0);
+                                i++;
+                            }
+
+
+                            if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                                titleLabel.setText("Player 1 wins!");
+
+                                break;
+
+                            }
+                            if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                                titleLabel.setText("Player 2 wins!");
+
+                                break;
+                            }
+                        }
+                    } else if (AI_square == 2) {
+                        for (int i = 0; i < 1; ) {
+                            if (button3.getText().equals("O")) {
+                                button3.setText("O");
+                                break;
+                            } else if (button3.getText().equals("X")) {
+                                button3.setText("X");
+                                //                                turn = true;
+                                i++;
+                            } else {
+                                button3.setText(turn.get(0));
+                                turn.remove(0);
+                            }
+
+
+                            if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                                titleLabel.setText("Player 1 wins!");
+
+                                break;
+                            }
+                            if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                                titleLabel.setText("Player 2 wins!");
+
+                                break;
+                            }
+                        }
+                    } else if (AI_square == 3) {
+                        for (int i = 0; i < 1; ) {
+                            if (button4.getText().equals("O")) {
+                                button4.setText("O");
+                                break;
+                            } else if (button4.getText().equals("X")) {
+                                button4.setText("X");
+                                //                                turn = true;
+                                i++;
+                            } else {
+                                button4.setText(turn.get(0));
+                                turn.remove(0);
+                            }
+
+                        }
+                        if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                            titleLabel.setText("Player 1 wins!");
+
+                            break;
+                        }
+                        if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                            titleLabel.setText("Player 2 wins!");
+
+                            break;
+                        }
+                    } else if (AI_square == 4) {
+                        for (int i = 0; i < 1; ) {
+                            if (button5.getText().equals("O")) {
+                                button5.setText("O");
+                                break;
+                            } else if (button5.getText().equals("X")) {
+                                button5.setText("X");
+                                //                                turn = true;
+                                i++;
+                            } else {
+                                button5.setText(turn.get(0));
+                                turn.remove(0);
+                            }
+
+                        }
+                        if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                            titleLabel.setText("Player 1 wins!");
+                            ;
+                            break;
+                        }
+                        if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                            titleLabel.setText("Player 2 wins!");
+
+                            break;
+                        }
+                    } else if (AI_square == 5) {
+                        for (int i = 0; i < 1; ) {
+                            if (button6.getText().equals("O")) {
+                                button6.setText("O");
+                                break;
+                            } else if (button6.getText().equals("X")) {
+                                button6.setText("X");
+                                //                                turn = true;
+                                i++;
+                            } else {
+                                button6.setText(turn.get(0));
+                                turn.remove(0);
+                            }
+                        }
+                    } else if (AI_square == 6) {
+                        for (int i = 0; i < 1; ) {
+                            if (button7.getText().equals("O")) {
+                                button7.setText("O");
+                                break;
+                            } else if (button7.getText().equals("X")) {
+                                button7.setText("X");
+                                //                                turn = true;
+                                i++;
+                            } else {
+                                button7.setText(turn.get(0));
+                                turn.remove(0);
+                            }
+
+                        }
+                        if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                            titleLabel.setText("Player 1 wins!");
+
+                            break;
+                        }
+                        if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                            titleLabel.setText("Player 2 wins!");
+
+                            break;
+                        }
+
+                    } else if (AI_square == 7) {
+                        for (int i = 0; i < 1; ) {
+                            if (button8.getText().equals("O")) {
+                                button8.setText("O");
+                                break;
+                            } else if (button8.getText().equals("X")) {
+                                button8.setText("X");
+                                //                                turn = true;
+                                i++;
+                            } else {
+                                button8.setText(turn.get(0));
+                                turn.remove(0);
+                            }
+
+                        }
+                        if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                            titleLabel.setText("Player 1 wins!");
+
+                            break;
+                        }
+                        if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                            titleLabel.setText("Player 2 wins!");
+
+                            break;
+                        }
+                    }
+                    else if (AI_square == 8) {
+                        for (int i = 0; i < 1; ) {
+                            if (button9.getText().equals("O")) {
+                                button9.setText("O");
+                                break;
+                            } else if (button9.getText().equals("X")) {
+                                button9.setText("X");
+                                //                                turn = true;
+                                i++;
+                            } else {
+                                button9.setText(turn.get(0));
+                                turn.remove(0);
+                            }
+
+                        }
+                        if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                            titleLabel.setText("Player 1 wins!");
+
+                            break;
+                        }
+                        if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                            titleLabel.setText("Player 2 wins!");
+
+                            break;
+                        }
+                    }
+                }
+
+
+                else{
+
+                    button1.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            for (int i = 0; i < 1; ) {
+                                if (button1.getText().equals("O")) {
+                                    button1.setText("O");
+                                    break;
+                                } else if (button1.getText().equals("X")) {
+                                    button1.setText("X");
+    //                                turn = true;
+                                    i++;
+                                } else {
+                                    button1.setText(turn.get(0));
+                                    turn.remove(0);
+                                    i++;
+
+                                }
+                                if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                                    titleLabel.setText("Player 1 wins!");
+
+                                    break;
+                                }
+                                if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                                    titleLabel.setText("Player 2 wins!");
+
+                                    break;
+                                }
+                            }
+
+
+                        }
+                    });
+
+
+
+    //                turn = true;
+                    button2.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            for (int i = 0; i < 1; ) {
+                                if (button2.getText().equals("O")) {
+                                    button2.setText("O");
+                                    break;
+                                } else if (button2.getText().equals("X")) {
+                                    button2.setText("X");
+    //                                turn = true;
+                                    i++;
+                                } else {
+                                    button2.setText(turn.get(0));
+                                    turn.remove(0);
+                                    i++;
+                                }
+                                if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                                    titleLabel.setText("Player 1 wins!");
+
+                                    break;
+                                }
+                                if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                                    titleLabel.setText("Player 2 wins!");
+
+                                    break;
+                                }
+                            }
+
+
+                        }
+                    });
+    //                turn = true;
+                    button3.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            for (int i = 0; i < 1; ) {
+                                if (button3.getText().equals("O")) {
+                                    button3.setText("O");
+                                    break;
+                                } else if (button3.getText().equals("X")) {
+                                    button3.setText("X");
+    //                                turn = true;
+                                    i++;
+                                } else {
+                                    button3.setText(turn.get(0));
+                                    turn.remove(0);
+                                }
+                                if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                                    titleLabel.setText("Player 1 wins!");
+
+                                    break;
+                                }
+                                if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                                    titleLabel.setText("Player 2 wins!");
+
+                                    break;
+                                }
+                            }
+
+
+
+                        }
+                    });
+    //                turn = true;
+                    button4.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            for (int i = 0; i < 1; ) {
+                                if (button4.getText().equals("O")) {
+                                    button4.setText("O");
+                                    break;
+                                } else if (button4.getText().equals("X")) {
+                                    button4.setText("X");
+    //                                turn = true;
+                                    i++;
+                                } else {
+                                    button4.setText(turn.get(0));
+                                    turn.remove(0);
+                                }
+                                if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                                    titleLabel.setText("Player 1 wins!");
+
+                                    break;
+                                }
+                                if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                                    titleLabel.setText("Player 2 wins!");
+
+                                    break;
+                                }
+                            }
+
+
+                        }
+                    });
+    //                turn = true;
+                    button5.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            for (int i = 0; i < 1; ) {
+                                if (button5.getText().equals("O")) {
+                                    button5.setText("O");
+                                    break;
+                                } else if (button5.getText().equals("X")) {
+                                    button5.setText("X");
+    //                                turn = true;
+                                    i++;
+                                } else {
+                                    button5.setText(turn.get(0));
+                                    turn.remove(0);
+                                }
+                                if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                                    titleLabel.setText("Player 1 wins!");
+
+                                    break;
+                                }
+                                if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                                    titleLabel.setText("Player 2 wins!");
+
+                                    break;
+                                }
+                            }
+
+
+                        }
+                    });
+    //                turn = true;
+                    button6.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            for (int i = 0; i < 1; ) {
+                                if (button6.getText().equals("O")) {
+                                    button6.setText("O");
+                                    break;
+                                } else if (button6.getText().equals("X")) {
+                                    button6.setText("X");
+    //                                turn = true;
+                                    i++;
+                                } else {
+                                    button6.setText(turn.get(0));
+                                    turn.remove(0);
+                                }
+                                if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                                    titleLabel.setText("Player 1 wins!");
+
+                                    break;
+                                }
+                                if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                                    titleLabel.setText("Player 2 wins!");
+
+                                    break;
+                                }
+                            }
+
+
+                        }
+                    });
+    //                turn = true;
+                    button7.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            for (int i = 0; i < 1; ) {
+                                if (button7.getText().equals("O")) {
+                                    button7.setText("O");
+                                    break;
+                                } else if (button7.getText().equals("X")) {
+                                    button7.setText("X");
+    //                                turn = true;
+                                    i++;
+                                } else {
+                                    button7.setText(turn.get(0));
+                                    turn.remove(0);
+                                }
+                                if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                                    titleLabel.setText("Player 1 wins!");
+
+                                    break;
+                                }
+                                if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                                    titleLabel.setText("Player 2 wins!");
+
+                                    break;
+                                }
+                            }
+
+
+                        }
+                    });
+    //                turn = true;
+                    button8.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            for (int i = 0; i < 1; ) {
+                                if (button8.getText().equals("O")) {
+                                    button8.setText("O");
+                                    break;
+                                } else if (button8.getText().equals("X")) {
+                                    button8.setText("X");
+    //                                turn = true;
+                                    i++;
+                                } else {
+                                    button8.setText(turn.get(0));
+                                    turn.remove(0);
+                                }
+                                if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                                    titleLabel.setText("Player 1 wins!");
+
+                                    break;
+                                }
+                                if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                                    titleLabel.setText("Player 2 wins!");
+
+                                    break;
+                                }
+                            }
+
+
+                        }
+                    });
+    //                turn = true;
+                    button9.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+    //                        String turn = "X";
+    //                        button9.setText("O");
+
+                            for (int i = 0; i < 1; ) {
+                                if (button9.getText().equals("O")) {
+                                    button9.setText("O");
+                                    break;
+                                } else if (button9.getText().equals("X")) {
+                                    button9.setText("X");
+    //                                turn = true;
+                                    i++;
+                                } else {
+                                    button9.setText(turn.get(0));
+                                    turn.remove(0);
+                                }
+                                if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X"))) {
+                                    titleLabel.setText("Player 1 wins!");
+
+                                    break;
+                                }
+                                if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O"))) {
+                                    titleLabel.setText("Player 2 wins!");
+
+
+                                    break;
+                                }
+                            }
+
+
+                        }
+                    });
+//                turn.remove(0);
+
+                }
+            }
         }
-//        while (game) {
-//            if (turn == true) {
+        if (!button1.getText().equals("") && !button2.getText().equals("") && !button3.getText().equals("") && !button4.getText().equals("") && !button5.getText().equals("") && !button6.getText().equals("") && !button7.getText().equals("") && !button8.getText().equals("") && !button9.getText().equals("")) {
+            titleLabel.setText("Draw");
+        }
 
-//                });
-//                turn = false;
-//                turn = false;
-//            }
-
-//            if (turn == false) {
-
-//                turn = true;
-//                turn = true;
-//            }
-//
-
-//        }
-
-
-//        }
-
-
-
-
-
-
-    }
-
-}
+    }}
