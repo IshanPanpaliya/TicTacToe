@@ -442,3 +442,109 @@ public class MainForm
         }
     }
 }
+if (button1.getText().equals(null)){
+            if (button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button7.getText().equals("X")) || (button5.getText().equals("X") && button9.getText().equals("X")){
+            button1.setText(turn.get(0));
+            turn.remove(0);
+        }}
+        if (button2.getText().equals(null)){
+            else if (button1.getText().equals("X") && button3.getText().equals("X")) || (button5.getText().equals("X") && button8.getText().equals("X"))
+        {
+            button2.setText(turn.get(0));
+            turn.remove(0);
+        }}
+        if (button3.getText().equals(null)){
+            else if (button2.getText().equals("X") && button1.getText().equals("X")) || (button6.getText().equals("X") && button9.getText().equals("X")) || (button5.getText().equals("X") && button6.getText().equals("X"))
+        {
+            button3.setText(turn.get(0));
+            turn.remove(0);
+        }}
+        if (button4.getText().equals(null)){
+            else if (button5.getText().equals("X") && button6.getText().equals("X")) || (button1.getText().equals("X") && button7.getText().equals("X"))
+            {
+                button4.setText(turn.get(0));
+                turn.remove(0);
+            }}
+        if (button5.getText().equals(null)){
+            else if (button4.getText().equals("X") && button6.getText().equals("X")) || (button2.getText().equals("X") && button8.getText().equals("X")) || (button1.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X"))
+        {
+            button5.setText(turn.get(0));
+            turn.remove(0);
+        }}
+        if (button6.getText().equals(null)){
+            else if (button5.getText().equals("X") && button4.getText().equals("X")) || (button3.getText().equals("X") && button9.getText().equals("X"))
+        {
+            button6.setText(turn.get(0));
+            turn.remove(0);
+        }}
+        if (button7.getText().equals(null)){
+            else if (button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X")) || (button5.getText().equals("X") && button3.getText().equals("X"))
+        {
+            button7.setText(turn.get(0));
+            turn.remove(0);
+        }}
+        if (button8.getText().equals(null)){
+            else if (button7.getText().equals("X") && button9.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X"))
+            {
+                button8.setText(turn.get(0));
+                turn.remove(0);
+            }}
+        if (button9.getText().equals(null)){
+            else if (button8.getText().equals("X") && button7.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X")) || (button5.getText().equals("X") && button1.getText().equals("X"))
+        {
+            button9.setText(turn.get(0));
+            turn.remove(0);
+        }}
+        if (button1.getText().equals(null)){
+            else if (button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button7.getText().equals("O")) || (button5.getText().equals("O") && button9.getText().equals("O")){
+            button1.setText(turn.get(0));
+            turn.remove(0);
+        }}
+        if (button2.getText().equals(null)){
+            else if (button1.getText().equals("O") && button3.getText().equals("O")) || (button5.getText().equals("O") && button8.getText().equals("X"))
+        {
+            button2.setText(turn.get(0));
+            turn.remove(0);
+        }}
+        if (button3.getText().equals(null)){
+            else if (button2.getText().equals("O") && button1.getText().equals("O")) || (button6.getText().equals("O") && button9.getText().equals("O")) || (button5.getText().equals("O") && button6.getText().equals("O"))
+        {
+            button3.setText(turn.get(0));
+            turn.remove(0);
+        }}
+        if (button4.getText().equals(null)){
+            else if (button5.getText().equals("X") && button6.getText().equals("O")) || (button1.getText().equals("O") && button7.getText().equals("O"))
+        {
+            button4.setText(turn.get(0));
+            turn.remove(0);
+        }}
+        if (button5.getText().equals(null)){
+            else if (button4.getText().equals("X") && button6.getText().equals("O")) || (button2.getText().equals("O") && button8.getText().equals("O")) || (button1.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O"))
+        {
+            button5.setText(turn.get(0));
+            turn.remove(0);
+        }}
+        if (button6.getText().equals(null)){
+            else if (button5.getText().equals("O") && button4.getText().equals("O")) || (button3.getText().equals("O") && button9.getText().equals("O"))
+        {
+            button6.setText(turn.get(0));
+            turn.remove(0);
+        }}
+        if (button7.getText().equals(null)){
+            else if (button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O")) || (button5.getText().equals("O") && button3.getText().equals("O"))
+        {
+            button7.setText(turn.get(0));
+            turn.remove(0);
+        }}
+        if (button8.getText().equals(null)){
+            else if (button7.getText().equals("O") && button9.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O"))
+        {
+            button8.setText(turn.get(0));
+            turn.remove(0);
+        }}
+        if (button9.getText().equals(null)){
+            else if (button8.getText().equals("O") && button7.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O")) || (button5.getText().equals("O") && button1.getText().equals("O"))
+        {
+            button9.setText(turn.get(0));
+            turn.remove(0);
+        }}
