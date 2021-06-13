@@ -31,7 +31,7 @@ public class MainForm {
 //        this.players = players;
 //    }
     public MainForm(boolean players){
-        final ArrayList<String>turn= new ArrayList<String>(Arrays.asList("O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X"));
+        final ArrayList<String>turn= new ArrayList<String>(Arrays.asList("X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X", "O", "X"));
 
         boolean game;
         game = true;
