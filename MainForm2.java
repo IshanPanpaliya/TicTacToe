@@ -53,13 +53,57 @@ public class MainForm
             {
                 titleLabel.setText("Player 1 wins!");
 
-                break;
+                titleLabel.setText("Player 1 wins!");
+                            button1.setVisible(false);
+                            button2.setVisible(false);
+                            button3.setVisible(false);
+                            button4.setVisible(false);
+                            button5.setVisible(false);
+                            button6.setVisible(false);
+                            button7.setVisible(false);
+                            button8.setVisible(false);
+                            button9.setVisible(false);
+                            mainMenuButton.setVisible(true);
+                            mainMenuButton.addActionListener(new ActionListener() {
+                                @Override
+                                public void actionPerformed(ActionEvent e) {
+                                    JFrame frame = new JFrame("My app");  // create an instance, title in ""
+                                    frame.setContentPane(new StartForm().getPanel1());  // adds the panel
+                                    frame.setSize(800,600);         // set it’s size
+                                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                                    frame.setLocation(200,100);     // where to place it
+                                    frame.setVisible(true);
+
+                                }
+                            });
             }
             if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O")))
             {
                 titleLabel.setText("Player 2 wins!");
 
-                break;
+                titleLabel.setText("Player 1 wins!");
+                            button1.setVisible(false);
+                            button2.setVisible(false);
+                            button3.setVisible(false);
+                            button4.setVisible(false);
+                            button5.setVisible(false);
+                            button6.setVisible(false);
+                            button7.setVisible(false);
+                            button8.setVisible(false);
+                            button9.setVisible(false);
+                            mainMenuButton.setVisible(true);
+                            mainMenuButton.addActionListener(new ActionListener() {
+                                @Override
+                                public void actionPerformed(ActionEvent e) {
+                                    JFrame frame = new JFrame("My app");  // create an instance, title in ""
+                                    frame.setContentPane(new StartForm().getPanel1());  // adds the panel
+                                    frame.setSize(800,600);         // set it’s size
+                                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                                    frame.setLocation(200,100);     // where to place it
+                                    frame.setVisible(true);
+
+                                }
+                            });
             }
         }
     }
@@ -660,16 +704,83 @@ public class MainForm
         if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X")))
         {
             titleLabel.setText("Player 1 wins!");
-            gameDone = true;
+            titleLabel.setText("Player 1 wins!");
+                            button1.setVisible(false);
+                            button2.setVisible(false);
+                            button3.setVisible(false);
+                            button4.setVisible(false);
+                            button5.setVisible(false);
+                            button6.setVisible(false);
+                            button7.setVisible(false);
+                            button8.setVisible(false);
+                            button9.setVisible(false);
+                            mainMenuButton.setVisible(true);
+                            mainMenuButton.addActionListener(new ActionListener() {
+                                @Override
+                                public void actionPerformed(ActionEvent e) {
+                                    JFrame frame = new JFrame("My app");  // create an instance, title in ""
+                                    frame.setContentPane(new StartForm().getPanel1());  // adds the panel
+                                    frame.setSize(800,600);         // set it’s size
+                                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                                    frame.setLocation(200,100);     // where to place it
+                                    frame.setVisible(true);
+
+                                }
+                            });
+            
         }
         if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O")))
         {
             titleLabel.setText("Player 2 wins!");
-            gameDone = true;
+            titleLabel.setText("Player 1 wins!");
+                            button1.setVisible(false);
+                            button2.setVisible(false);
+                            button3.setVisible(false);
+                            button4.setVisible(false);
+                            button5.setVisible(false);
+                            button6.setVisible(false);
+                            button7.setVisible(false);
+                            button8.setVisible(false);
+                            button9.setVisible(false);
+                            mainMenuButton.setVisible(true);
+                            mainMenuButton.addActionListener(new ActionListener() {
+                                @Override
+                                public void actionPerformed(ActionEvent e) {
+                                    JFrame frame = new JFrame("My app");  // create an instance, title in ""
+                                    frame.setContentPane(new StartForm().getPanel1());  // adds the panel
+                                    frame.setSize(800,600);         // set it’s size
+                                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                                    frame.setLocation(200,100);     // where to place it
+                                    frame.setVisible(true);
+
+                                }
+                            });
         }
         if(getNextEmpty(btnArr) == -1){
             titleLabel.setText("It Is A Draw!");
-            gameDone = true;
+            titleLabel.setText("Player 1 wins!");
+                            button1.setVisible(false);
+                            button2.setVisible(false);
+                            button3.setVisible(false);
+                            button4.setVisible(false);
+                            button5.setVisible(false);
+                            button6.setVisible(false);
+                            button7.setVisible(false);
+                            button8.setVisible(false);
+                            button9.setVisible(false);
+                            mainMenuButton.setVisible(true);
+                            mainMenuButton.addActionListener(new ActionListener() {
+                                @Override
+                                public void actionPerformed(ActionEvent e) {
+                                    JFrame frame = new JFrame("My app");  // create an instance, title in ""
+                                    frame.setContentPane(new StartForm().getPanel1());  // adds the panel
+                                    frame.setSize(800,600);         // set it’s size
+                                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                                    frame.setLocation(200,100);     // where to place it
+                                    frame.setVisible(true);
+
+                                }
+                            });
         }
     }
     public void WaitSec(int t){
