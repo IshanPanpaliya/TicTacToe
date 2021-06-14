@@ -110,7 +110,28 @@ public class MainForm
                 @Override
                 public void actionPerformed(ActionEvent e)
                 {
-                    playTurn(button1);
+                    for (int i = 0; i < 1; )
+                    {
+                        if(gameDone){
+                            return;
+                        }
+                        if (button1.getText().equals("O"))
+                        {
+                            button1.setText("O");
+                            break;
+                        } else if (button1.getText().equals("X"))
+                        {
+                            button1.setText("X");
+//                                turn = true;
+                            i++;
+                        } else
+                        {
+                            button1.setText(turn.get(0));
+                            turn.remove(0);
+                            i++;
+                        }
+                        winProcedure();
+                    }
                 }
             });
             button2.addActionListener(new ActionListener()
@@ -120,6 +141,9 @@ public class MainForm
                 {
                     for (int i = 0; i < 1; )
                     {
+                        if(gameDone){
+                            return;
+                        }
                         if (button2.getText().equals("O"))
                         {
                             button2.setText("O");
@@ -146,6 +170,9 @@ public class MainForm
                 @Override
                 public void actionPerformed(ActionEvent e)
                 {
+                    if(gameDone){
+                        return;
+                    }
                     for (int i = 0; i < 1; )
                     {
                         if (button3.getText().equals("O"))
@@ -162,16 +189,7 @@ public class MainForm
                             button3.setText(turn.get(0));
                             turn.remove(0);
                         }
-                        if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X")))
-                        {
-                            titleLabel.setText("Player 1 wins!");
-                            break;
-                        }
-                        if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O")))
-                        {
-                            titleLabel.setText("Player 2 wins!");
-                            break;
-                        }
+                        winProcedure();
                     }
 
 
@@ -182,6 +200,9 @@ public class MainForm
                 @Override
                 public void actionPerformed(ActionEvent e)
                 {
+                    if(gameDone){
+                        return;
+                    }
                     for (int i = 0; i < 1; )
                     {
                         if (button4.getText().equals("O"))
@@ -198,16 +219,7 @@ public class MainForm
                             button4.setText(turn.get(0));
                             turn.remove(0);
                         }
-                        if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X")))
-                        {
-                            titleLabel.setText("Player 1 wins!");
-                            break;
-                        }
-                        if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O")))
-                        {
-                            titleLabel.setText("Player 2 wins!");
-                            break;
-                        }
+                        winProcedure();
                     }
 
 
@@ -218,6 +230,9 @@ public class MainForm
                 @Override
                 public void actionPerformed(ActionEvent e)
                 {
+                    if(gameDone){
+                        return;
+                    }
                     for (int i = 0; i < 1; )
                     {
                         if (button5.getText().equals("O"))
@@ -234,16 +249,7 @@ public class MainForm
                             button5.setText(turn.get(0));
                             turn.remove(0);
                         }
-                        if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X")))
-                        {
-                            titleLabel.setText("Player 1 wins!");
-                            break;
-                        }
-                        if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O")))
-                        {
-                            titleLabel.setText("Player 2 wins!");
-                            break;
-                        }
+                        winProcedure();
                     }
 
 
@@ -254,6 +260,9 @@ public class MainForm
                 @Override
                 public void actionPerformed(ActionEvent e)
                 {
+                    if(gameDone){
+                        return;
+                    }
                     for (int i = 0; i < 1; )
                     {
                         if (button6.getText().equals("O"))
@@ -270,16 +279,7 @@ public class MainForm
                             button6.setText(turn.get(0));
                             turn.remove(0);
                         }
-                        if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X")))
-                        {
-                            titleLabel.setText("Player 1 wins!");
-                            break;
-                        }
-                        if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O")))
-                        {
-                            titleLabel.setText("Player 2 wins!");
-                            break;
-                        }
+                        winProcedure();
                     }
 
 
@@ -290,6 +290,9 @@ public class MainForm
                 @Override
                 public void actionPerformed(ActionEvent e)
                 {
+                    if(gameDone){
+                        return;
+                    }
                     for (int i = 0; i < 1; )
                     {
                         if (button7.getText().equals("O"))
@@ -306,16 +309,7 @@ public class MainForm
                             button7.setText(turn.get(0));
                             turn.remove(0);
                         }
-                        if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X")))
-                        {
-                            titleLabel.setText("Player 1 wins!");
-                            break;
-                        }
-                        if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O")))
-                        {
-                            titleLabel.setText("Player 2 wins!");
-                            break;
-                        }
+                        winProcedure();
                     }
 
 
@@ -326,6 +320,9 @@ public class MainForm
                 @Override
                 public void actionPerformed(ActionEvent e)
                 {
+                    if(gameDone){
+                        return;
+                    }
                     for (int i = 0; i < 1; )
                     {
                         if (button8.getText().equals("O"))
@@ -342,16 +339,7 @@ public class MainForm
                             button8.setText(turn.get(0));
                             turn.remove(0);
                         }
-                        if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X")))
-                        {
-                            titleLabel.setText("Player 1 wins!");
-                            break;
-                        }
-                        if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O")))
-                        {
-                            titleLabel.setText("Player 2 wins!");
-                            break;
-                        }
+                        winProcedure();
                     }
 
 
@@ -362,9 +350,9 @@ public class MainForm
                 @Override
                 public void actionPerformed(ActionEvent e)
                 {
-//                        String turn = "X";
-//                        button9.setText("O");
-
+                    if(gameDone){
+                        return;
+                    }
                     for (int i = 0; i < 1; )
                     {
                         if (button9.getText().equals("O"))
@@ -381,16 +369,7 @@ public class MainForm
                             button9.setText(turn.get(0));
                             turn.remove(0);
                         }
-                        if ((button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")) || (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")) || (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")) || (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")) || (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")) || (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")) || (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X")))
-                        {
-                            titleLabel.setText("Player 1 wins!");
-                            break;
-                        }
-                        if ((button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")) || (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")) || (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")) || (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")) || (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")) || (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")) || (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O")))
-                        {
-                            titleLabel.setText("Player 2 wins!");
-                            break;
-                        }
+                        winProcedure();
                     }
 
 
@@ -701,4 +680,20 @@ public class MainForm
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
